@@ -3,8 +3,10 @@
     <h2 class="font-semibold text-xl text-gray-800 leading-tight">
         {{ __('Dashboard') }}
     </h2>
+    
     <div id="fb-root"></div>
     <script async defer crossorigin="anonymous" src="https://connect.facebook.net/th_TH/sdk.js#xfbml=1&version=v13.0" nonce="EilFLZKb"></script>
+    
 </x-slot>
 
 <div class="py-12">
@@ -33,7 +35,8 @@
                             </form>
                         </td>
                         <td class="p-3 px-5">
-                            <div class="fb-share-button" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button" data-size="large"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">แชร์</a></div>
+                            <a class="twitter-share-button" href="https://twitter.com/intent/tweet?text=Hello%20world" style="background-color: #1da1f2; border-radius: 5px; color: #fff; padding: 3px 5px;"> Tweet </a>
+                            <div class="fb-share-button" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button" data-size="large"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">SHARE</a></div>
                         </td>
                     </tr>
                 @endforeach
