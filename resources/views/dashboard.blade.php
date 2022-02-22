@@ -3,6 +3,8 @@
     <h2 class="font-semibold text-xl text-gray-800 leading-tight">
         {{ __('Dashboard') }}
     </h2>
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/th_TH/sdk.js#xfbml=1&version=v13.0" nonce="EilFLZKb"></script>
 </x-slot>
 
 <div class="py-12">
@@ -29,6 +31,9 @@
                                 <button type="submit" name="delete" formmethod="POST" class="text-sm text-white py-1 px-2 rounded focus:outline-none focus:shadow-outline" style="background-color: #ff758f;">Delete</button>
                                 {{ csrf_field() }}
                             </form>
+                        </td>
+                        <td class="p-3 px-5">
+                            <div class="fb-share-button" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button" data-size="large"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">แชร์</a></div>
                         </td>
                     </tr>
                 @endforeach
