@@ -10,6 +10,7 @@ trait CreatesApplication
      * Creates the application.
      *
      * @return \Illuminate\Foundation\Application
+     * hello
      */
     public function createApplication()
     {
