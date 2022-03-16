@@ -59,4 +59,13 @@ jobs:
           name: "Run Http Tests"
           command: ./vendor/bin/phpunit tests/Feature
 
+      - run:
+          name: "Create database and run migration"
+          command: |
+              touch database/database.sqlite
+              php artisan migrate --env=testing
+
+      - run:
+          name: "Run Http Tests"
+          command: ./vendor/bin/phpunit tests/Feature
 
