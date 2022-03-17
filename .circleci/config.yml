@@ -17,6 +17,10 @@ jobs:
       - run:
           name: "Say hello"
           command: "echo Hello, World!"
+      
+      - run:
+          name: "Run Unit Tests"
+          command: ./vendor/bin/phpunit tests/Unit
 
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
