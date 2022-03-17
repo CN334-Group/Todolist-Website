@@ -45,9 +45,9 @@ jobs:
           name: "Run Unit Tests"
           command: ./vendor/bin/phpunit tests/Unit
 
-	    - run:
-	      name: "Run Http Tests"
-	      command: ./vendor/bin/phpunit tests/Feature
+      - run:
+          name: "Run Http Tests"
+          command: ./vendor/bin/phpunit tests/Feature
 
 workflows:
   test-workflow:
