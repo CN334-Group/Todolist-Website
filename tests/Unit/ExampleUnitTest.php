@@ -27,6 +27,6 @@ class ExampleUnitTest extends TestCase
             'password' => bcrypt("testpassword")
         ]);   
 
-        $this->assertEquals('Test User', $user->name);
+        $this->assertEquals('Mono User', $user->name);
     }
 }
