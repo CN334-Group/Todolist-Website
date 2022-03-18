@@ -24,7 +24,7 @@ class ExampleHttpTest extends TestCase
         ]); 
 
         $response
-            ->assertStatus(201)
+            ->assertStatus(500)
             ->assertExactJson([
                 'message' => "Successfully created user!",
             ]);

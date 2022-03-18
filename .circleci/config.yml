@@ -60,16 +60,5 @@ jobs:
           command: ./vendor/bin/phpunit tests/Feature
 
       
-      #I Love cat
-      #I Love cat
-      #I Love cat
-      #I Love cat
-      #I Love cat
-      #I Love cat
-      #I Love cat
-      #I Love cat
-      #I Love cat
-      #I Love cat
-      #I Love cat
 
 
