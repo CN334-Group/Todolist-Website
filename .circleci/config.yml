@@ -22,7 +22,7 @@ jobs:
             touch database/database.sqlite
             php artisan migrate --env=testing
             
-      # run tests with phpunit
+      # run tests with phpunit test feature
       - run:
           name: "Run Unit Tests"
           command: ./vendor/bin/phpunit tests/Feature
