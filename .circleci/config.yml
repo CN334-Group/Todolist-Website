@@ -21,6 +21,10 @@ jobs:
           command: |
             touch database/database.sqlite
             php artisan migrate --env=testing
+        
+        - run:
+          name: "Generate App key"
+          command: php artisan key:generate
             
       # run tests with phpunit test feature
       - run:
