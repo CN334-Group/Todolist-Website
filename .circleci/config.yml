@@ -22,7 +22,7 @@ jobs:
             touch database/database.sqlite
             php artisan migrate --env=testing
         
-        - run:
+      - run:
           name: "Generate App key"
           command: php artisan key:generate
             
