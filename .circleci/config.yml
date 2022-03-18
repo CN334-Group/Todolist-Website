@@ -8,6 +8,17 @@ jobs:
     steps:
       - checkout
 
+      - run:
+          name: "Prepare Environment"
+          command: |
+            sudo apt update
+            sudo docker-php-ext-install zip
+
+      - run:
+          name: "Create Environment file"
+          command: |
+            mv .env.testing .env
+
       # Download and cache dependencies
       - restore_cache:
           keys:
@@ -15,6 +26,15 @@ jobs:
             - v1-dependencies-{{ checksum "composer.json" }}
             # fallback to using the latest cache if no exact match is found
             - v1-dependencies-
+
+      - run:
+          name: "Install Dependencies"
+          command: composer install -n --prefer-dist
+
+      - save_cache:
+          key: v1-dependencies-{{ checksum "composer.json" }}
+          paths:
+            - ./vendor
 
       - run:
           name: "Create database and run migration"
