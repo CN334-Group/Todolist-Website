@@ -29,4 +29,10 @@ class ExampleUnitTest extends TestCase
 
         $this->assertEquals('Test User', $user->name);
     }
+
+    public function testSeeder()
+    {
+        $this->seed();
+    }
+
 }
