@@ -47,7 +47,7 @@ jobs:
             php artisan migrate --env=testing
 
       - run:
-          name: "Create Seeder"
+          name: "Test UserSeeder"
           command: php artisan db:seed --class=UserSeeder
 
       - run:
