@@ -48,10 +48,7 @@ jobs:
 
       - run:
           name: "Create Seeder"
-          command: |
-            php artisan make:seeder UserSeeder
-            php artisan db:seed
-            php artisan migrate:fresh --seed
+          command: php artisan db:seed --class=UserSeeder
 
       - run:
           name: "Generate App key"
