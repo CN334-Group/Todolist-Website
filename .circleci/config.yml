@@ -47,6 +47,10 @@ jobs:
             php artisan migrate --env=testing
 
       - run:
+          name: "Create Seeder"
+          command: php artisan make:seeder UserSeeder
+
+      - run:
           name: "Generate App key"
           command: php artisan key:generate
 
