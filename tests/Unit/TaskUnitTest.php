@@ -22,17 +22,17 @@ class TaskUnitTest extends TestCase
     public function testUserIdTask()
     {
         $task = new Task([
-            'user_id' => "1",
+            'user_id' => 1,
             'description' => "Reading Book",
         ]);   
 
-        $this->assertEquals('1', $task->user_id);
+        $this->assertEquals(1, $task->user_id);
     }
 
     public function testCreateEnglishTask()
     {
         $task = new Task([
-            'user_id' => "1",
+            'user_id' => 1,
             'description' => "Reading Book",
         ]);   
 
@@ -42,7 +42,7 @@ class TaskUnitTest extends TestCase
     public function testCreateThaiTask()
     {
         $task = new Task([
-            'user_id' => "1",
+            'user_id' => 1,
             'description' => "อ่านหนังสือ",
         ]);   
 
@@ -52,7 +52,7 @@ class TaskUnitTest extends TestCase
     public function testCreateNumberTask()
     {
         $task = new Task([
-            'user_id' => "1",
+            'user_id' => 1,
             'description' => 1,
         ]);   
 
@@ -62,7 +62,7 @@ class TaskUnitTest extends TestCase
     public function testEmpthyTask()
     {
         $task = new Task([
-            'user_id' => "1",
+            'user_id' => 1,
             'description' => "",
         ]);   
 
@@ -72,7 +72,7 @@ class TaskUnitTest extends TestCase
     public function testNullTask()
     {
         $task = new Task([
-            'user_id' => "1",
+            'user_id' => 1,
             'description' => null,
         ]);   
 
