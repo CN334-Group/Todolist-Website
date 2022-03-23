@@ -37,6 +37,11 @@ jobs:
           command: |
             touch database/database.sqlite
             php artisan migrate --env=testing
+
+      - run: 
+          name: "Run seeder"
+          command: |
+            php artisan db:seed  
         
       - run:
           name: "Generate App key"
