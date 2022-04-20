@@ -14,8 +14,12 @@ class TaskUnitTest extends TestCase
      *
      * @return void
      */
+    public function testBasicTest()
+    {
+        $this->assertTrue(true);
+    }
 
-    public function Test_User_Id_Task()
+    public function testUserIdTask()
     {
         $task = new Task([
             'user_id' => 1,
@@ -25,7 +29,7 @@ class TaskUnitTest extends TestCase
         $this->assertEquals(1, $task->user_id);
     }
 
-    public function Test_Create_English_Task()
+    public function testCreateEnglishTask()
     {
         $task = new Task([
             'user_id' => 1,
@@ -35,7 +39,7 @@ class TaskUnitTest extends TestCase
         $this->assertEquals('Reading Book', $task->description);
     }
 
-    public function Test_Create_Thai_Task()
+    public function testCreateThaiTask()
     {
         $task = new Task([
             'user_id' => 1,
@@ -45,7 +49,7 @@ class TaskUnitTest extends TestCase
         $this->assertEquals('อ่านหนังสือ', $task->description);
     }
 
-    public function Test_Create_Number_Task()
+    public function testCreateNumberTask()
     {
         $task = new Task([
             'user_id' => 1,
@@ -55,7 +59,7 @@ class TaskUnitTest extends TestCase
         $this->assertEquals(1 , $task->description);
     }
 
-    public function Test_Empthy_Task()
+    public function testEmpthyTask()
     {
         $task = new Task([
             'user_id' => 1,
@@ -65,14 +69,14 @@ class TaskUnitTest extends TestCase
         $this->assertEquals('', $task->description);
     }
 
-    public function Test_Null_Task()
+    public function testNullTask()
     {
         $task = new Task([
             'user_id' => 1,
             'description' => null,
         ]);   
 
-        $this->assertNotEquals("", $task->description);
+        $this->assertEquals(null, $task->description);
     }
 
 }

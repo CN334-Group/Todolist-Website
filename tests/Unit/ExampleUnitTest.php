@@ -7,7 +7,7 @@ use Illuminate\Foundation\Testing\RefreshDatabase;
 
 use App\Models\User;
 
-class UserUnitTest extends TestCase
+class ExampleUnitTest extends TestCase
 {
     /**
      * A basic test example.
