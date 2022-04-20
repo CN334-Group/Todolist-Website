@@ -52,7 +52,7 @@ class UserUnitTest extends TestCase
     {
         $user = new User([
             'name' => "Test User",
-            'email' => "Lovecat",
+            'email' => 0123456,
             'password' => bcrypt("พาสเวิร์ด")
         ]);   
 
