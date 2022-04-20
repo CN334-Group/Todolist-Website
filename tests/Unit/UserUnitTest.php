@@ -14,12 +14,8 @@ class UserUnitTest extends TestCase
      *
      * @return void
      */
-    public function testBasicTest()
-    {
-        $this->assertTrue(true);
-    }
 
-    public function testUserCreation()
+    public function Test_User_Creation()
     {
         $user = new User([
             'name' => "Test User",
