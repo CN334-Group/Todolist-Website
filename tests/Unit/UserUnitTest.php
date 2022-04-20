@@ -48,4 +48,15 @@ class UserUnitTest extends TestCase
         $this->assertEquals('Test User', $user->name);
     }
 
+    public function Test_User_Mistake_Email_Creation()
+    {
+        $user = new User([
+            'name' => "Test User",
+            'email' => "Lovecat",
+            'password' => bcrypt("พาสเวิร์ด")
+        ]);   
+
+        $this->assertEquals('Test User', $user->name);
+    }
+
 }
